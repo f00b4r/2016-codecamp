@@ -1,0 +1,38 @@
+.movie-list img {
+	border-radius: 50%;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid #0c60ee;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.font-large {
+	font-size: 1.5em;
+}
+
+.font-bold {
+	font-weight: bold;
+}
+
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
+}
+
+.clearfix:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.profile .pull-left {
+	width: 50%;
+}
