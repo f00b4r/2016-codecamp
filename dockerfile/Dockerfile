@@ -26,6 +26,7 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Volumes
 VOLUME /data
+WORKDIR /data
 
 # Entrypoint
 CMD ["/bin/bash"]
