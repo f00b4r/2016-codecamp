@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Update dist
 RUN apt-get update \
-	&& apt-get upgrade \
+	&& apt-get upgrade -y \
 	&& apt-get install -y curl wget
 
 # Install NodeJS
@@ -19,7 +19,10 @@ RUN npm install -g \
 		gulp \
 		bower \
 		ionic \
-		cordova 
+		cordova
+
+# Install git
+RUN apt-get install -y git
 
 # Clean
 RUN apt-get clean && apt-get autoremove
