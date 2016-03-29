@@ -17,8 +17,9 @@ RUN curl -sL https://deb.nodesource.com/setup_5.x | bash - \
 # Install packages
 RUN npm install -g \
 		gulp \
+		bower \
 		ionic \
-		cordova
+		cordova 
 
 # Clean
 RUN apt-get clean && apt-get autoremove
