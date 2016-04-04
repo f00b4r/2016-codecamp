@@ -1,13 +1,4 @@
 {
-  "name": "MilanSulc@Hw2",
-  "app_id": "",
-  "gulpStartupTasks": [
-    "sass",
-    "scripts",
-    "watch"
-  ],
-  "watchPatterns": [
-    "www/**/*",
-    "!www/lib/**/*"
-  ]
+  "name": "MilanSulcAppMovies",
+  "app_id": "e008a764"
 }
