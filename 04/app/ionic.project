@@ -1,0 +1,13 @@
+{
+  "name": "MilanSulc@Hw4",
+  "app_id": "44b3c393",
+  "gulpStartupTasks": [
+    "sass",
+    "scripts",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

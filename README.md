@@ -23,11 +23,18 @@ Great and simple docker container based on Debian Jessie with pre-configured ser
 
 ## Homeworks
 
-### [01](https://github.com/f3l1x/codecamp16/tree/master/01)
+## 01
 
-`Simple ionic creator`
-
+`Install Android SDK, NodeJS, Gulp etc..`
 
 ### [02](https://github.com/f3l1x/codecamp16/tree/master/02)
 
+`Simple ionic creator`
+
+### [03](https://github.com/f3l1x/codecamp16/tree/master/03)
+
 `Easy-to-use movie list`
+
+### [04](https://github.com/f3l1x/codecamp16/tree/master/04)
+
+`Simple REST API from themoviedb, infinite scrolling`

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="App" ng-controller="MainCtrl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src &apos;self&apos; &apos;unsafe-inline&apos; localhost; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; localhost:*">
+    <title></title>
+
+    <!--locales-->
+    <script src="locales/cs.js"></script>
+    <script src="locales/en.js"></script>
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="css/libs.css" rel="stylesheet">
+
+    <script src="js/libs.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="js/pre-init.js"></script>
+    <script src="app/routes.js"></script>
+    <script src="directives/directives.js"></script>
+    <script src="filters/filters.js"></script>
+
+    <!-- models -->
+    <script src="model/global-service.js"></script>
+
+    <!-- controllers -->
+    <script src="views/main/main.js"></script>
+    <script src="views/home/home.js"></script>
+
+</head>
+<body animation="slide-left-right-ios7">
+
+<ion-nav-bar class="bar-positive">
+    <ion-nav-back-button class="button-clear button-icon">
+    </ion-nav-back-button>
+</ion-nav-bar>
+
+
+<ion-nav-view animation="slide-left-right">
+</ion-nav-view>
+
+</body>
+</html>

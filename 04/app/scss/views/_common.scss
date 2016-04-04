@@ -1,0 +1,144 @@
+//
+// BASIC TAGS
+//
+
+body {
+  background: $background;
+}
+
+a {
+  color: $positive;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-size: $headingFontSize;
+  font-family: $fontFamily;
+}
+
+//
+// CUSTOM CLASSES
+//
+
+
+.both {
+  clear: both
+}
+.border-top {
+  border-top: solid 2px $textColor;
+}
+
+.border-bottom {
+  border-bottom: solid 2px $textColor;
+}
+
+.on-the-top {
+  z-index: 100;
+  position: absolute;
+}
+
+.top-margin {
+  margin-top: 10px;
+}
+
+.bottom-margin {
+  margin-bottom: 10px;
+}
+
+.u {
+  text-decoration: underline;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.hidden{
+  display: none;
+}
+
+#view-movie-list {
+
+  .rating-green {
+    .item-content {
+      border-left: 10px solid green;
+    }
+  }
+  .rating-red {
+    .item-content {
+      border-left: 10px solid red;
+    }
+  }
+  .rating-blue {
+    .item-content {
+      border-left: 10px solid blue;
+    }
+  }
+  .rating-purple {
+    .item-content {
+      border-left: 10px solid purple;
+    }
+  }
+
+  .button-bar {
+    padding: 5px;
+    background: #08b1ff;
+  }
+
+}
+
+#view-movie-detail {
+  .bar:first-of-type {
+    margin: 0;
+  }
+  .bar {
+    margin-top: 40px;
+    position: relative;
+  }
+}
+
+.usage-modal {
+  .box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #fff;
+    vertical-align: middle;
+      text-align: center;
+
+    .box-inner {
+      position: absolute;
+      top: 35%;
+      width: 100%;
+    }
+
+    h1 {
+      line-height: 100px;
+      font-size: 25px;
+    }
+  }
+
+  .blue {
+    background: blue;
+
+    h1 {
+      color: #fff;
+    }
+  }
+
+  .yellow {
+    background: yellow;
+  }
+
+  .pink {
+    background: pink;
+  }
+}
+
+.bar .header-button {
+    border: 0;
+    font-size: 30px;
+}
+
+.modal-wrapper, .slider {
+    height: 100%;
+}
