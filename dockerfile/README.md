@@ -14,5 +14,5 @@ docker run \
 ## Attach
 
 ```sh
-docker attach codecamp /bin/bash
+docker exec -i -t codecamp /bin/bash
 ```
