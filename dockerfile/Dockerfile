@@ -32,5 +32,8 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 VOLUME /data
 WORKDIR /data
 
+# Scripts
+ADD ./scripts/codecamp-share.sh /usr/bin/codecamp-share
+
 # Entrypoint
 CMD ["/bin/bash"]
