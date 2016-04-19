@@ -18,7 +18,6 @@ RUN curl -sL https://deb.nodesource.com/setup_5.x | bash - \
 RUN npm install -g \
 		gulp \
 		bower \
-		ionic \
 		ionic@beta \
 		cordova 
 
