@@ -19,7 +19,8 @@ RUN npm install -g \
 		gulp \
 		bower \
 		ionic \
-		cordova
+		ionic@beta \
+		cordova 
 
 # Install git
 RUN apt-get install -y git
