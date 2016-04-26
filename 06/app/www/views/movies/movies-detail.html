@@ -1,0 +1,45 @@
+<ion-view title="{{data.movie.title}}" id="view-movie-detail">
+	<ion-content>
+		<div class="bar bar-energized">
+		  <h1 class="title">Map</h1>
+		</div>
+    	<div class="country-map" google-chart chart="map"></div>
+
+
+		<div class="bar bar-energized">
+		  <h1 class="title">Share</h1>
+		</div>
+
+		<ion-list>
+			<ion-item>
+				<button class="button button-block button-positive" ng-click="share('twitter')"><i class="icon ion-social-twitter"></i> Share on Twitter</button>
+				<button class="button button-block button-royal" ng-click="share('email')"><i class="icon ion-email"></i> Share on Email</button>
+			</ion-item>
+		</ion-list>
+				
+
+		<div class="bar bar-energized">
+		  <h1 class="title">Casts</h1>
+		</div>
+		<ion-list>
+			<ion-item class="item-avatar-left" ng-repeat="cast in data.credits.cast">
+				<img ng-if="cast.profile_path" ng-src="http://image.tmdb.org/t/p/w500/{{cast.profile_path}}">
+				<strong>{{cast.character}}</strong>
+				<br>
+				{{cast.name}}
+			</ion-item>
+		</ion-list>
+
+		<div class="bar bar-royal">
+		  <h1 class="title">Crew</h1>
+		</div>
+		<ion-list>
+			<ion-item class="item-avatar-right" ng-repeat="crew in data.credits.crew">
+				<img ng-if="crew.profile_path" ng-src="http://image.tmdb.org/t/p/w500/{{crew.profile_path}}">
+				<strong>{{crew.department}}</strong>
+				<br>
+				{{crew.name}}
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,92 @@
+<ion-view title="Movies" id="view-movie-list">
+
+    <ion-nav-buttons side="left">
+	  <button class="button header-button icon ion-help" ng:click="openUsageModal()"></button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+	  <button class="button header-button icon ion-ios-plus" ng:click="openAddMovieModal()"></button>
+    </ion-nav-buttons>
+
+	<ion-content>
+		<div class="button-bar bar-positive">
+		  <a ng-click="changeOrdering('title')" class="button" ng-class="{'active': ordering=='title'}">A..Z</a>
+		  <a ng-click="changeOrdering('-release_date')" class="button" ng-class="{'active': ordering=='-release_date'}">Newest</a>
+		  <a ng-click="changeOrdering('-vote_average')" class="button" ng-class="{'active': ordering=='-vote_average'}">Top rated</a>
+		</div>
+
+		<div class="item-input-inset">
+			<div class="item-input-wrapper">
+    			<i class="icon ion-search placeholder-icon"></i>
+				<input type="search" placeholder="Search..." ng-model="searchString">
+			</div>
+		</div>
+
+		<ion-list>
+			<ion-item class="item-avatar-left" ng-repeat="movie in data.movies | filter: searchString | orderBy: ordering" ng-class="{'rating-green':movie.vote_average>8, 'rating-blue':movie.vote_average<=8 && movie.vote_average>5, 'rating-purple':movie.vote_average<=5 && movie.vote_average>2, 'rating-red':movie.vote_average<=2}" ui-sref="movie-detail({id: movie.id})">
+				<img ng-src="http://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}">
+				{{movie.title}}
+				<ion-option-button class="button-assertive" ng-click="removeMovie(movie.id)">Delete</ion-option-button>
+			</ion-item>
+		</ion-list>
+
+		<ion-infinite-scroll
+			on-infinite="loadMore()"
+			distance="1%">
+		</ion-infinite-scroll>
+	</ion-content>
+</ion-view>
+
+<script id="add-movie-modal.html" type="text/ng-template">
+  <div class="modal">
+      <ion-header-bar>
+      <h1 class="title">Add movie</h1>
+      <div class="button button-clear" ng-click="addMovieModal.hide()"><span class="icon ion-close"></span></div>
+    </ion-header-bar>
+    <ion-content>
+      <form ng-submit="addMovie(movie)"
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input placeholder="Matrix" required ng-model="movie.title" type="text">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Released</span>
+          <input placeholder="1.1.1970" required ng-model="movie.released" type="date">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Rating</span>
+          <input placeholder="8.5" ng-model="movie.rating" required type="number" maxlength="1" step="0.1" min="0">
+        </label>
+      	<button class="button button-full button-energized" type="submit">Add</button>
+      </div>
+    </ion-content>
+    </content>
+  </div>
+</script>
+<script id="usage-modal.html" type="text/ng-template">
+	<ion-slide-box show-pager="false" delegate-handle="usage" class="usage-modal" on-slide-changed="slideHasChanged($index)">
+	  <ion-slide>
+	    <div class="box blue">
+	    	<div class="box-inner">
+	    		<h1>Cannot wait?</h1>
+	    	</div>
+    	</div>
+	  </ion-slide>
+	  <ion-slide>
+	    <div class="box yellow">
+	    	<div class="box-inner">
+	    		<h1>Almost there..</h1>
+	    	</div>
+    	</div>
+	  </ion-slide>
+	  <ion-slide>
+	    <div class="box pink">
+	    	<div class="box-inner">
+		    	<h1>This is movie list!</h1>
+		  		<button class="button button-assertive icon ion-happy-outline" ng:click="closeUsageModal()"> Continue to movie list</button>
+	    	</div>
+    	</div>
+	  </ion-slide>
+	</ion-slide-box>
+</script>

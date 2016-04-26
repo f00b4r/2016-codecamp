@@ -1,0 +1,26 @@
+// Partials
+@import "partials/variables";
+@import "partials/fonts";
+@import "partials/mixins";
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../fonts" !default;
+
+// Include all of Ionic
+@import "../bower_components/ionic/scss/ionic";
+
+
+// UI elements
+@import "ui/bars";
+@import "ui/button";
+@import "ui/button-bar";
+@import "ui/forms";
+@import "ui/loading";
+@import "ui/messages";
+@import "ui/popup";
+@import "ui/side-menu";
+@import "ui/spinner";
+@import "ui/tabs";
+
+// Views
+@import "views/common";
